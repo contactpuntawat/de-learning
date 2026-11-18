@@ -1,0 +1,20 @@
+2026-11-16 02:00:01 INFO  [daily_sales] Pipeline started
+2026-11-16 02:00:03 INFO  [extract] Extracted 14870 rows from orders
+2026-11-16 02:00:06 INFO  [transform] Cleaning data
+2026-11-16 02:00:09 INFO  [load] Writing to warehouse table daily_sales
+2026-11-16 02:00:14 INFO  [load] Loaded 14870 rows
+2026-11-16 02:00:14 INFO  [daily_sales] Pipeline SUCCESS in 13s
+2026-11-17 02:00:01 INFO  [daily_sales] Pipeline started
+2026-11-17 02:00:05 INFO  [extract] Extracted 15230 rows from orders
+2026-11-17 02:00:06 WARN  [extract] 12 rows have NULL customer_id
+2026-11-17 02:00:07 INFO  [transform] Cleaning data
+2026-11-17 02:00:09 INFO  [transform] Removed 12 invalid rows
+2026-11-17 02:00:10 INFO  [load] Writing to warehouse table daily_sales
+2026-11-17 02:00:15 ERROR [load] Connection timeout to warehouse
+2026-11-17 02:00:20 INFO  [load] Retry 1/3
+2026-11-17 02:00:25 ERROR [load] Connection timeout to warehouse
+2026-11-17 02:00:30 INFO  [load] Retry 2/3
+2026-11-17 02:00:35 ERROR [load] Connection timeout to warehouse
+2026-11-17 02:00:40 INFO  [load] Retry 3/3
+2026-11-17 02:00:45 ERROR [load] Max retries reached, aborting
+2026-11-17 02:00:45 ERROR [daily_sales] Pipeline FAILED after 44s
